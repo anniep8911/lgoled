@@ -226,10 +226,10 @@ if(wid<=700){
         e.addEventListener('touchend',function(ev){
             edX = ev.changedTouches[0].screenX;
             edY = ev.changedTouches[0].screenY;
-            if(stX>edX && Math.abs(stY-edY)<=70){
+            if(stX>edX && Math.abs(stY-edY)<=10){
                 leftSlide(i,'left','-66.66%','-33.33%');
                 alert('레프트니!!');
-            }else if(stX<edX && Math.abs(stY-edY)<=70){
+            }else if(stX<edX && Math.abs(stY-edY)<=10){
                 leftSlide(i,'right','0%','-33.33%');
                 alert('라이트니!!');
             }
