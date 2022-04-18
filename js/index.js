@@ -222,15 +222,16 @@ if(wid<=700){
         e.addEventListener('touchstart',function(ev){
             stX = ev.changedTouches[0].screenX;
             stY = ev.changedTouches[0].screenY;
-            alert('터치먹히니!!');
         },false);
         e.addEventListener('touchend',function(ev){
             edX = ev.changedTouches[0].screenX;
             edY = ev.changedTouches[0].screenY;
             if(stX>edX && Math.abs(stY-edY)<=70){
                 leftSlide(i,'left','-66.66%','-33.33%');
+                alert('레프트니!!');
             }else if(stX<edX && Math.abs(stY-edY)<=70){
                 leftSlide(i,'right','0%','-33.33%');
+                alert('라이트니!!');
             }
         },false);
 
