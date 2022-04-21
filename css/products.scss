@@ -175,7 +175,7 @@ $mob:700px;
                         }
                         article{
                             position: relative;
-                            width: calc(100% / 6 - 20px);
+                            width: #{'min(calc(100% / 6 - 20px),200px)'};
                             margin: 0 10px;
                             @include mob{
                                 width: calc(100% / 3 - 20px);
