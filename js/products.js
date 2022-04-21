@@ -74,7 +74,7 @@ window.onscroll=function(){
         vid.play();
     }
 }
-=======
+
 const viewAll = document.querySelector('.content .btn');
 const artVw = document.querySelector('.content .artView');
 const vid = document.querySelector('main video');
