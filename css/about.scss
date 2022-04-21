@@ -1,0 +1,233 @@
+@import url('./common.min.css');
+
+@mixin fontFace($name,$url){
+    @font-face {
+        font-family: '#{$name}';
+        src: url('#{$url}') format('truetype');
+    }
+}
+@mixin  img($size) {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: $size;
+}
+
+@include fontFace('oo','./DancingScript-VariableFont_wght.ttf');
+@include fontFace('xe','./xeicon.ttf');
+@include fontFace('main','./Dosis-VariableFont_wght.ttf');
+
+
+
+@mixin grid{
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+$mob:700px;
+
+@mixin mob{
+    @media (min-width:0px) and (max-width:#{$mob}) {
+        @content;
+    }
+}
+
+html,body{
+    font-family: 'main';
+    div.hdrWrap{
+        position: fixed;
+        top: 0;left: 0;
+        width: 100%;
+    }
+    
+    .history{
+        position: relative;
+        width: 100%;
+        .bg{
+            width: 50%;
+            height: 100vh;
+            background-color: #cdc8bc;
+            @include img(cover);
+            background-position: -300%;
+            position: fixed;
+            top: 0;left: 0;
+            padding-top: #{'min(2rem,80px)'} ;
+            @include mob{
+                width: 100%;
+                height: #{'min(6rem,240px)'} ;
+            }
+            &::before{
+                content: '';
+                display: block;
+                width: 90%;
+                height: 90%;
+                background-color: #cdc8bc;
+                opacity: 0.4;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                border-radius: 5%;
+            }
+            .bg01{
+                width: 50vw;
+                height: 20vh;
+                margin: auto;
+                @include mob{
+                    margin-top: -10%;
+                }
+                svg{
+                    transform: rotate(40deg);
+                    @include mob{
+                        transform: rotate(0deg);
+                    }
+                    text{
+                        stroke: #fff;
+                        stroke-width: 1;
+                        fill:transparent;
+                        font-size: #{'max(2.5em,25px)'};
+                        @include mob{
+                            font-size:25px;
+                        }
+                        font-family: 'oo';
+                        stroke-dasharray: 430;
+                        stroke-dashoffset: 430;
+                        transition: all 0.5s;
+                        stroke-linecap: round;
+                    }
+                    
+                }
+            }
+        }
+        .cntWrap{
+            width: 50%;
+            position: absolute;
+            right: 0;top: 0;
+            padding-top: #{'min(2rem,80px)'};
+            padding-bottom: #{'min(2rem,80px)'};
+            @include mob{
+                width: 100%;
+                z-index: -5;
+                padding-top: #{'min(6rem,240px)'};
+            }
+            &::before{
+                content: '';
+                display: block;
+                width: 50%;
+                height: #{'min(2rem,80px)'};
+                position: fixed;
+                top: 0;right: 0;
+                background-color: #fff;
+                z-index: 6;
+                @include mob{
+                    display: none   
+                }
+
+            }
+            .content{
+                @include grid();
+                margin-top: #{'min(2rem,80px)'};
+                @include mob{
+                    margin-top: #{'min(1rem,40px)'};
+
+                }
+                &.cnt01~div{
+                    margin-top: #{'min(4rem,160px)'};
+                    @include mob{
+                        margin-top: #{'min(1rem,40px)'};
+
+                    }
+                }
+                header{
+                    h2{
+                        font-size:  #{'min(2.4rem,24px)'};
+                        line-height: #{'min(2rem,80px)'};
+                        text-transform: uppercase;
+                        @include mob{
+                            font-size:  #{'min(2rem,20px)'};
+                            line-height: #{'min(1rem,40px)'};
+
+                        }
+                    }
+                    p{
+                        font-size: #{'min(1.4em,14px)'};
+                        line-height:#{'min(0.5rem,20px)'};
+                        height: #{'min(1rem,40px)'};
+                        overflow: hidden;
+                        @include mob{
+                            display: none;
+                        }
+                    }
+                }
+                section{
+                    margin-top: #{'min(1rem, 40px)'};
+                    @include mob{
+                        margin-top: #{'min(0.5rem, 20px)'};
+
+                    }
+                    .artView{
+                        position: relative;
+                        overflow: hidden;
+                        .artGr{
+                            width: 400%;
+                            display: flex;
+                            justify-content: space-around;
+                            margin-left: -100%;
+                            transition: margin-left 0.5s;
+                            article{
+                                width: calc(100% / 4 - 20px);
+                                @include mob{
+                                    width: 100%;
+                                }
+                                .image{
+                                    text-indent: -99999px;
+                                    height: #{'min(6rem,240px)'};
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+
+                                    @for $i from 1 through 4{
+                                        &.i#{$i}{
+                                            background-image: url('../image/about_cnt01_pic0#{$i}.jpg');
+                                        }
+                                    }
+
+                                }
+                                .texts{
+                                    margin-top: #{'min(-1rem,-40px)'};
+                                    h3{
+                                        font-size: #{'min(2em,20px)'};
+                                        line-height: #{'min(1rem,40px)'};
+                                        text-transform: capitalize;
+                                        text-align: center;
+                                        font-weight: 700;
+                                        color: #fff;
+                                        text-shadow: 2px 2px 4px #000;
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        .btn{
+                            font-family: 'xe';
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            position: absolute;
+                            height: #{'min(1rem,40px)'};
+                            font-size: #{'min(4em,40px)'};
+                            position: absolute;
+                            margin: auto;
+                            top: 0;bottom: 0;
+                            z-index: 5;
+                            font-weight: 700;
+                            color: #ccc;
+                            text-shadow: 2px 2px 4px #000;
+                            .left,.right{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
