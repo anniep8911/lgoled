@@ -150,4 +150,3 @@ window.onscroll=function(){
         vid.play();
     }
 }
->>>>>>> 8d35227eda4980d3f4bfa251767c2ad4dcc93fc8
