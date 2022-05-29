@@ -1,4 +1,5 @@
 @import url('./reset.min.css');
+@import url('./xeicon.min.css');
 
 $mob:700px;
 
@@ -19,7 +20,7 @@ $mob:700px;
         font-family: '#{$name}';
         src: url('#{$url}') format('truetype');
     }
-  }
+}
   
 @include fontFace('xe','./xeicon.ttf');
 @include fontFace('main','./Dosis-VariableFont_wght.ttf');
@@ -48,7 +49,9 @@ body{
                 font-size: #{"min(2.4em,24px)"};
                 cursor: pointer;
                 @include mob{
-                    font-size: #{'min(1.5em, 15px)'};
+                    a{
+                        font-size: #{'max(1em, 10px)'};
+                    }
                 }
             }
             nav{
@@ -59,6 +62,7 @@ body{
                     @include mob{
                         margin-left: 0;
                         padding: 0 20px;
+                        font-size: #{"min(1em,12px)"};
                     }
                     cursor: pointer;
                     &:nth-child(3)~h4{
@@ -69,6 +73,10 @@ body{
             }
         } 
     }
+    .banner sub, section>h3, .image, article>h3{
+        color: transparent;
+    }
+    
 
 
     .ftrWrap{

@@ -1,0 +1,353 @@
+@import url("./common.min.css");
+body {
+  position: relative;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body div.hdrWrap {
+    line-height: min(1rem, 40px);
+  }
+}
+
+body div.hdrWrap header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  line-height: 10vh;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body div.hdrWrap header {
+    line-height: min(1rem, 40px);
+  }
+}
+
+body .magazine .cntWrap {
+  -webkit-transition: backgound-color 0.5s;
+  transition: backgound-color 0.5s;
+}
+
+body .magazine .cntWrap .content {
+  width: 80%;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+body .magazine .cntWrap .content header {
+  width: 80%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 10vh;
+}
+
+body .magazine .cntWrap .content header h2 {
+  font-size: min(2.4rem,24px);
+  line-height: min(2rem,80px);
+  text-transform: uppercase;
+}
+
+body .magazine .cntWrap .content header h5 {
+  font-size: min(1.8em,18px);
+  line-height: min(1rem,40px);
+  text-transform: capitalize;
+}
+
+body .magazine .cntWrap .content header p {
+  font-size: min(1.4em,14px);
+  line-height: min(0.5rem,20px);
+  height: min(2rem,80px);
+  overflow: hidden;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content header p {
+    font-size: max(1.2em,12px);
+  }
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content header {
+    top: 5vh;
+  }
+}
+
+body .magazine .cntWrap .content header h2 {
+  line-height: 10vh;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content header h2 {
+    line-height: 5vh;
+    font-size: min(2em,20px);
+  }
+}
+
+body .magazine .cntWrap .content header p {
+  width: 70%;
+  height: 5vh;
+}
+
+body .magazine .cntWrap .content section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content section {
+    display: block;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content section .artGroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 200%;
+  }
+}
+
+body .magazine .cntWrap .content section .artGroup .grid {
+  height: 1000vh;
+  position: relative;
+  padding-top: 20vh;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content section .artGroup .grid {
+    padding-top: 0;
+    height: auto;
+    width: calc(50% - 10px);
+  }
+}
+
+body .magazine .cntWrap .content section .artGroup .grid:nth-child(even) {
+  direction: rtl;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid:nth-child(even) .texts {
+  direction: ltr;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content section .artGroup .grid article {
+    opacity: 1;
+    overflow: hidden;
+  }
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article.on {
+  opacity: 1;
+  top: 20vh;
+  position: fixed;
+  width: min(80%,1080px);
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content section .artGroup .grid article.on {
+    top: 0vh;
+    width: 100%;
+    position: relative;
+  }
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image {
+  height: 50vh;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image .ovrGrid {
+  width: calc((100vw - 1080px) / 2 + 100%);
+  min-width: calc((100vw - 80vw) / 2 + 100%);
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 {
+  position: relative;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../image/magazine_cnt01_pic01-1.jpg");
+  opacity: 0;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(1).show {
+  opacity: 1;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../image/magazine_cnt01_pic01-2.jpg");
+  opacity: 0;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(2).show {
+  opacity: 1;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../image/magazine_cnt01_pic01-3.jpg");
+  opacity: 0;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(3).show {
+  opacity: 1;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../image/magazine_cnt01_pic01-4.jpg");
+  opacity: 0;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(4).show {
+  opacity: 1;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(5) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../image/magazine_cnt01_pic01-5.jpg");
+  opacity: 0;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(5).show {
+  opacity: 1;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(6) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../image/magazine_cnt01_pic01-6.jpg");
+  opacity: 0;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i1 .ovrGrid:nth-child(6).show {
+  opacity: 1;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid {
+  overflow: hidden;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid .gr {
+  width: 600%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid .gr div {
+  width: 100%;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid .gr div.o1 {
+  background-image: url("../image/magazine_cnt01_pic02-1.png");
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid .gr div.o2 {
+  background-image: url("../image/magazine_cnt01_pic02-2.png");
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid .gr div.o3 {
+  background-image: url("../image/magazine_cnt01_pic02-3.png");
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid .gr div.o4 {
+  background-image: url("../image/magazine_cnt01_pic02-4.png");
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .image.i2 .ovrGrid .gr div.o5 {
+  background-image: url("../image/magazine_cnt01_pic02-5.png");
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .texts {
+  background-color: #fff;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content section .artGroup .grid article .texts {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: min(1rem,40px);
+  }
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .texts h3 {
+  line-height: min(1rem,40px);
+  font-size: min(2em, 20px);
+  text-transform: uppercase;
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+  body .magazine .cntWrap .content section .artGroup .grid article .texts h3 {
+    font-weight: 700;
+  }
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .texts h5 {
+  font-weight: 700;
+}
+
+body .magazine .cntWrap .content section .artGroup .grid article .texts p {
+  line-height: min(1rem,20px);
+  font-size: min(1.5em, 14px);
+}
+
+body .ftrWrap {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+body .ftrWrap footer {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+/*# sourceMappingURL=magazine.css.map */

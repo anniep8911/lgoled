@@ -184,12 +184,6 @@ html,body{
                                     background-repeat: no-repeat;
                                     background-size: cover;
 
-                                    @for $i from 1 through 4{
-                                        &.i#{$i}{
-                                            background-image: url('../image/about_cnt01_pic0#{$i}.jpg');
-                                        }
-                                    }
-
                                 }
                                 .texts{
                                     margin-top: #{'min(-1rem,-40px)'};
@@ -223,6 +217,16 @@ html,body{
                             text-shadow: 2px 2px 4px #000;
                             .left,.right{
                                 cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                @for $j from 1 through 4{
+                &.cnt0#{$j}
+                    .image{
+                        @for $i from 1 through 4{
+                            &.i#{$i}{
+                                background-image: url('../image/about_cnt0#{$j}_pic0#{$i}.jpg');
                             }
                         }
                     }
