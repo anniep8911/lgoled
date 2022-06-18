@@ -74,8 +74,7 @@ body{
                 }
                 header{
                     @include hdr();
-                    width: 80%;
-                    margin: auto;
+                    @include grid();
                     left: 0;right: 0;
                     position: fixed;
                     top: 10vh;
@@ -156,7 +155,7 @@ body{
                                                 position: absolute;
                                                 top: 0;
                                                 left: 0;
-                                                background-image: url('../image/magazine_cnt01_pic01-#{$i}.jpg');
+                                                background-image: url('../image/magazine_cnt01_pic01-#{$i}.webp');
                                                 opacity: 0;
                                                 &.show{
                                                     opacity: 1;
@@ -177,7 +176,7 @@ body{
                                                     @include img(100%);
                                                     @for $i from 1 through 5{
                                                         &.o#{$i}{
-                                                            background-image: url('../image/magazine_cnt01_pic02-#{$i}.png');
+                                                            background-image: url('../image/magazine_cnt01_pic02-#{$i}.webp');
                                                         }
                                                     }
                                                 }
