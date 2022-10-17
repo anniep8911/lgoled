@@ -226,12 +226,11 @@ if(wid<=700){
         e.addEventListener('touchend',function(ev){
             edX = ev.changedTouches[0].screenX;
             edY = ev.changedTouches[0].screenY;
-            if(stX>edX && Math.abs(stY-edY)<=10){
+            console.log(stX-edX);
+            if(stX>edX && Math.abs(stX-edX)>30 && Math.abs(stY-edY)<=10){
                 leftSlide(i,'left','-66.66%','-33.33%');
-              
-            }else if(stX<edX && Math.abs(stY-edY)<=10){
+            }else if(stX<edX && Math.abs(stX-edX)>30 && Math.abs(stY-edY)<=10){
                 leftSlide(i,'right','0%','-33.33%');
-                
             }
         },false);
     });
